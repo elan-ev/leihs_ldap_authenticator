@@ -1,0 +1,8 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Check that leihs-ldap-authenticator is active
+      ansible.builtin.command:  # noqa no-changed-when command-instead-of-module
+        cmd: systemctl is-active leihsldap

@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: Include leihs_ldap_authenticator
+      ansible.builtin.include_role:
+        name: leihs_ldap_authenticator
